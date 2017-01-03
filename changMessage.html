@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>changeMessage</title>
+</head>
+<body>
+
+<div id="divOne">
+	<p id="wordOne"></p>
+</div>
+
+<style>
+	#divOne{
+		height:30px;
+		width:100%;
+		text-align: center;
+	}
+</style>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	$("#wordOne").css("color", "red");
+
+	
+
+	function wrapRepeat(){
+
+	function changeIt(newWord){
+		var word = document.getElementById("wordOne");
+		word.innerHTML = newWord;
+	};
+
+	setTimeout(function(){changeIt("hello")},10);
+	setTimeout(function(){changeIt("there")},1000);
+	setTimeout(function(){changeIt("world")},2000);
+	
+};
+
+	setInterval(function(){wrapRepeat()},3000);
+
+
+
+</script>
+	
+</body>
+</html>
